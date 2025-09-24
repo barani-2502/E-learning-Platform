@@ -1,0 +1,18 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# SQLite database (default for Django)
+db.sqlite3
+
+# Environment variables file (if you use one)
+.env
+
+# Django media files (uploads)
+media/
+
+# Django static files (if you collect them locally)
+staticfiles/
+
+# Logs
+*.log
