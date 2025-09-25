@@ -29,7 +29,7 @@ class ManageCourseListView(OwnerCourseMixin, ListView):
 class CourseCreateView(OwnerCourseEditMixin, CreateView):
     permission_required = 'courses.add_course'
 
-class CourseUpdateView(OwnerEditMixin, UpdateView):
+class CourseUpdateView(OwnerCourseEditMixin, UpdateView):
     permission_required = 'courses.change_course'
 
 class CourseDeleteView(OwnerCourseMixin, DeleteView):
