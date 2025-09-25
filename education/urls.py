@@ -24,4 +24,5 @@ urlpatterns = [
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
     path('course/', include('courses.urls')),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

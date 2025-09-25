@@ -12,10 +12,9 @@
         <a href="/" class="logo">EduNation</a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
-                <li><a href="{5 url "logout" %}">Sign out</a></li>
+                <li><a href="{% url "logout" %}">Sign out</a></li>
             {% else %}
                 <li><a href="{% url "login" %}">Sign in</a></li>
-            
             {% endif %}
         </ul>
     </div>
@@ -32,5 +31,7 @@
             {% endblock %}
         });
     </script>
+    {% load django_browser_reload %}
+    {% django_browser_reload_script %}
 </body>
 </html>
