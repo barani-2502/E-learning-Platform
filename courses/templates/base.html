@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}EduNation{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
     <div id="header">
         <a href="/" class="logo">EduNation</a>
         <ul class="menu">
             {% if request.user.is_authenticated %}
-                <li><a href="{% url "logout" %}">Sign out</a></li>
+                <li><a href="{% url 'logout' %}">Sign out</a></li>
             {% else %}
-                <li><a href="{% url "login" %}">Sign in</a></li>
+                <li><a href="{% url 'login' %}">Sign in</a></li>
             {% endif %}
         </ul>
     </div>
