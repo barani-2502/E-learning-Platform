@@ -16,3 +16,5 @@ staticfiles/
 
 # Logs
 *.log
+
+images/
