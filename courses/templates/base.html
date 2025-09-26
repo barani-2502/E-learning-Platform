@@ -1,4 +1,4 @@
-{% load static %}
+{% load static django_browser_reload %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}EduNation{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -18,20 +21,19 @@
             {% endif %}
         </ul>
     </div>
+
     <div id="content">
         {% block content %}
         {% endblock %}
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
     <script>
         $(document).ready(function() {
             {% block domready %}
             {% endblock %}
         });
     </script>
-    {% load django_browser_reload %}
+
     {% django_browser_reload_script %}
 </body>
 </html>
