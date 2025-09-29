@@ -18,3 +18,7 @@ staticfiles/
 *.log
 
 images/
+
+Lib/
+Scripts/
+pyvenv.cfg
