@@ -158,3 +158,12 @@ ASGI_APPLICATION = 'education.routing.application'
 import django.utils.translation
 from django.utils import translation
 translation.LANGUAGE_SESSION_KEY = 'django_language'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('172.30.5.17', 6379)]
+        },
+    },
+}
