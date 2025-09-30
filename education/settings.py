@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_browser_reload',
+    #pyt'django_browser_reload',
     'students.apps.StudentsConfig',
     'embed_video',
     'memcache_status',
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     #'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     #'django.middleware.cache.FetchFromCacheMiddleware',
-    'django_browser_reload.middleware.BrowserReloadMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -155,3 +154,7 @@ REST_FRAMEWORK = {
 }
 
 ASGI_APPLICATION = 'education.routing.application'
+
+import django.utils.translation
+from django.utils import translation
+translation.LANGUAGE_SESSION_KEY = 'django_language'
