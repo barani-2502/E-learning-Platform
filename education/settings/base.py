@@ -131,7 +131,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
-        'LOCATION': '172.30.5.17:11211',
+        'LOCATION': '127.0.0.1:11211',
     }
 }
 
@@ -155,7 +155,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('172.30.5.17', 6379)]
+            'hosts': [('127.0.0.1', 6380)]
         },
     },
 }

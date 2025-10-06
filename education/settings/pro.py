@@ -1,9 +1,9 @@
 from .base import *
 
-DEBUG = False
+DEBUG = True
 
 ADMINS = (
-    ('Barani B', 'barani2502@gmail.com')
+    ('Barani B', 'barani2502@gmail.com'),
 )
 
 ALLOWED_HOSTS = ['*']
@@ -18,3 +18,11 @@ DATABASES = {
         'PORT': '5432'
     }
 }
+
+# Use WhiteNoise for static files
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+] + MIDDLEWARE
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
